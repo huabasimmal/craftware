@@ -5,8 +5,8 @@ import core.control.GUIController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class TestStarter extends Application {
-	private static CoreController core;
+public class ApplicationLauncher extends Application {
+	private CoreController core;
 	private GUIController gui;
 
 	@Override
@@ -25,7 +25,7 @@ public class TestStarter extends Application {
 	/**
 	 * @return the core
 	 */
-	public static CoreController getCore() {
+	public CoreController getCore() {
 		return core;
 	}
 
@@ -33,8 +33,8 @@ public class TestStarter extends Application {
 	 * @param core
 	 *            the core to set
 	 */
-	public static void setCore(CoreController core) {
-		TestStarter.core = core;
+	public void setCore(CoreController core) {
+		this.core = core;
 	}
 
 	/**
