@@ -8,7 +8,7 @@ public class CoreController {
 	public CoreController() {
 		setMasterdata(new MasterdataController());
 		setOrderdata(new OrderdataController());
-//		setDatabase(new DatabaseController());
+		setDatabase(new DatabaseController());
 	}
 
 	/**

@@ -10,16 +10,15 @@ public class DatabaseController {
 	EntityManagerFactory entityManagerFactory;
 
 	public DatabaseController() {
-		setEntityManagerFactory(Persistence.createEntityManagerFactory("objectdb:database/craftware.odb"));
-		setEntityManager(entityManagerFactory.createEntityManager());
+		setEntityManagerFactory(Persistence.createEntityManagerFactory("objectdb:resources/database/craftware.odb"));
 	}
 
 	public void closeDatabase() {
-		entityManagerFactory.close();
+		getEntityManagerFactory().close();
 	}
 
 	public void closeTransaction() {
-		entityManager.close();
+		getEntityManager().close();
 	}
 
 	/**
@@ -46,8 +45,9 @@ public class DatabaseController {
 	}
 
 	public List<?> readFromDatabase(Class<?> entity) {
-		entityManager.getTransaction().begin();
-		return entityManager.createQuery("SELECT e FROM " + entity.getName() + " AS e").getResultList();
+		setEntityManager(entityManagerFactory.createEntityManager());
+		getEntityManager().getTransaction().begin();
+		return getEntityManager().createQuery("SELECT e FROM " + entity.getName() + " AS e").getResultList();
 	}
 
 	/**
