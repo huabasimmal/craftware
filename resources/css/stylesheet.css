@@ -1,108 +1,109 @@
-.background {
-    -fx-background-color: #253031;
+.root{
+	-global-color-transp: transparent;
+	-global-color-light-blue: #00A8E8;
+	-global-color-mid-blue: #007EA7;
+	-global-color-dark-blue: #003459;
+	-global-color-white: #FFFFFF;
+	
+	-fx-background-color: -global-color-white;
+	-fx-focus-color: -global-color-transp;
+	-fx-faint-focus-color: -global-color-transp;
 }
 
-.label {
-    -fx-font-size: 14pt;
-    -fx-text-fill: white;
+.menu-bar{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px;
 }
 
-.label-bright {
-    -fx-font-size: 11pt;
-    -fx-text-fill: white;
+.menu-bar .label{
+	-fx-background-color: -global-color-transp;
+	-fx-font-size: 11.0pt;
 }
 
-.label-header {
-    -fx-font-size: 32pt;
-    -fx-text-fill: white;
+.menu:hover{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 4.0px 0.0px;
 }
 
-.table-view {
-    -fx-base: #253031;
-    -fx-control-inner-background: derive(#253031, 50%);
-    -fx-background-color: #253031;
-    -fx-table-cell-border-color: transparent;
-    -fx-table-header-border-color: transparent;
-    -fx-padding: 5;
+.menu:showing{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 4.0px 0.0px;
 }
 
-.table-view .column-header-background {
-    -fx-background-color: transparent;
+.context-menu{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-light-blue;
+	-fx-border-width: 1.0px;
+}
+.menu-item:hover{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 4.0px 0.0px;
 }
 
-.table-view .column-header, .table-view .filler {
-    -fx-size: 35;
-    -fx-border-width: 0 0 1 0;
-    -fx-background-color: transparent;
-    -fx-border-color: 
-        transparent
-        transparent
-        derive(-fx-base, 80%) 
-        transparent;
-    -fx-border-insets: 0 10 1 0;
-}
-
-.table-view .column-header .label {
-    -fx-font-size: 14pt;
-    -fx-text-fill: white;
-    -fx-alignment: center-left;
-}
-
-.table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: #0094C6;
-}
-
-.split-pane:horizontal > .split-pane-divider {
-    -fx-border-color: transparent #253031 transparent #253031;
-    -fx-background-color: transparent, derive(#253031, 50%);
+.menu-item:focused{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 4.0px 0.0px;
 }
 
 .split-pane{
-    -fx-padding: 1 0 0 0;
+	-fx-background-color: -global-color-transp;
+}
+
+.anchor-pane{
+	-fx-background-color: -global-color-transp;
+}
+
+.label{
+	-fx-text-fill: -global-color-dark-blue;
+	-fx-font-size: 13.0pt;
+}
+
+.table-view{
+	-fx-background-color: -global-color-transp;
+}
+
+.table-row-cell{
+	-fx-border-color: -global-color-light-blue;
+}
+
+.column-header-background{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-light-blue;
+	-fx-border-width: 2.0px;
+}
+
+.column-header{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-light-blue;
+	-fx-border-width: 0.0px 1.0px;
+}
+
+.split-pane-divider{
+	-fx-background-color: -global-color-light-blue;
+	-fx-padding: 0.5;
 }
 
 .tab-pane{
-	-fx-background-color: #253031;
+	-fx-background-color: -global-color-transp;
 }
 
-.tab-pane .tab-header-background{
-	-fx-background-color: #253031;
+.tab-header-background{
+	-fx-background-color: -global-color-transp;
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px;
 }
 
-.tab-pane .tab{
-	-fx-background-color: derive(#253031, 50%);
-}
-
-.tab-pane .tab:selected{
-	-fx-background-color: #2589BD;
-}
-.tab-pane .tab-label{
-	-fx-font-size: 14pt;
-	-fx-text-fill: white;
-}
-
-.menu-bar {
-    -fx-background-color: #253031;
-}
-
-.context-menu {
-    -fx-background-color: derive(#253031, 50%);
-    -fx-border-color: #253031;
-}
-
-.menu-bar .label {
-    -fx-font-size: 14pt;
-    -fx-text-fill: white;
-}
-
-.menu-bar .menu:hover{
-	-fx-background-color: #2589BD;
-}
-
-.menu .left-container {
-    -fx-background-color: black;
-}
-
-.text-field {
-    -fx-font-size: 12pt;
+.tab{
+	-fx-background-color: -global-color-transp;
+	-fx-border-width: 0.0px 0.0px 4.0px 0.0px;
+	-fx-font-size: 13.0pt;
+	}
+	
+.tab:selected{
+	-fx-border-color: -global-color-transp -global-color-transp -global-color-light-blue -global-color-transp;
 }
